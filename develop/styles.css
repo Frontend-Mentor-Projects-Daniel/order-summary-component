@@ -15,14 +15,19 @@ body {
   padding: 0;
 }
 
+h2,
+p {
+  font-weight: normal;
+}
+
 /* Center the card */
 .section-main {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 100vh;
-  width: 1440px;
+  min-height: 100vh;
+  max-width: 1440px;
 }
 
 .card {
@@ -31,11 +36,12 @@ body {
 
   border-radius: 20px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-  width: 450px;
+  width: 23.4375rem;
 }
 
 .card__image {
   border-radius: 20px 20px 0 0;
+  width: 23.4375rem;
 }
 
 .card__bottom {
@@ -46,50 +52,117 @@ body {
 }
 
 .card__header {
+  font-weight: 900;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
 .card__text {
+  color: #a2aab3;
   padding: 0 5rem;
 }
 
 .card__payment-plan-block {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
   border-radius: 10px;
   background-color: var(--very-pale-blue);
-  width: 22.5rem;
+  gap: 1rem;
+  width: 85%;
 }
 
 .card__plan {
-  display: inline;
+  /* display: inline; */
 }
 
 .card__icon,
 .card__plan-type,
 .card__plan-price {
-  display: inherit;
+  /* display: inherit; */
 }
 
 .card__icon {
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
 }
 
 .card__plan-type {
-  margin-right: 5rem;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
-.card__link {
+.card__plan-price {
+  margin-top: 0;
+}
+
+.card__link:hover {
+  color: hsl(245, 75%, 60%);
+  text-decoration-line: none;
 }
 
 .btn {
   border-radius: 10px;
   border: none;
+  box-shadow: 0 7px 10px 4px hsla(224, 23%, 55%, 0.264);
   margin: 2rem 0 1rem 0;
   padding: 0.8rem 0;
-  width: 22.5rem;
+  width: 85%;
+}
+
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: hsl(245, 75%, 60%);
+  cursor: pointer;
 }
 
 .card__link--cancel {
+  color: #a2aab3;
+  font-weight: 700;
+  text-decoration-line: none;
+  margin-bottom: 2rem;
+}
+
+.card__link--cancel:hover {
+  color: black;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 20.3125rem;
+  }
+
+  .card__image {
+    width: 20.3125rem;
+  }
+
+  .card__payment-plan-block {
+    padding: 0 0.5rem;
+    width: 85%;
+  }
+
+  .card__plan {
+    margin-left: 0;
+  }
+
+  .card__icon {
+    margin-right: 0;
+  }
+
+  .card__plan-type {
+    margin-bottom: 0;
+  }
+
+  .card__plan-price {
+    margin-top: 0;
+  }
+
+  .card__link {
+    /* padding: 0 0.5rem; */
+  }
 }
