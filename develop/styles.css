@@ -1,0 +1,95 @@
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the card */
+.section-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 1440px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  width: 450px;
+}
+
+.card__image {
+  border-radius: 20px 20px 0 0;
+}
+
+.card__bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__header {
+  margin-bottom: 0;
+}
+
+.card__text {
+  padding: 0 5rem;
+}
+
+.card__payment-plan-block {
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: var(--very-pale-blue);
+  width: 22.5rem;
+}
+
+.card__plan {
+  display: inline;
+}
+
+.card__icon,
+.card__plan-type,
+.card__plan-price {
+  display: inherit;
+}
+
+.card__icon {
+  margin: 0 2rem;
+}
+
+.card__plan-type {
+  margin-right: 5rem;
+}
+
+.card__link {
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+  margin: 2rem 0 1rem 0;
+  padding: 0.8rem 0;
+  width: 22.5rem;
+}
+
+.card__link--cancel {
+}
